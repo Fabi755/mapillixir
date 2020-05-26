@@ -65,6 +65,7 @@ defmodule Mapillixir do
     {result, next_url} = request_with_pagination(:get, url)
     {[result], next_url}
   end
+
   defp request_with_pagination(method, url) do
     request!(method, url)
     |> build_pagination_response()
